@@ -1,7 +1,12 @@
 class ResponseUtils {
 
     static done = (error, response) => {
-        console.log(JSON.stringify(response))
+
+        if (error) {
+            console.log("Error", error);
+          } else {
+            console.log("Success", JSON.stringify(response));
+          }
     }
 }
 

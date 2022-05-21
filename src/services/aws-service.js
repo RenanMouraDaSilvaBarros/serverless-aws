@@ -12,6 +12,8 @@ class AwsService {
                 console.log("succsess");
             }
         });
+
+        
     }
 
 }

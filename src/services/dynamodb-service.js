@@ -24,7 +24,7 @@ class DynamoDbService {
         dynamoDb.scan({ TableName }, ResponseUtils.done)
     }
 
-    static createItem({TableName,item}) {
+    static createItem({TableName,Item}) {
         DynamoDbService.getOrCreateInstace()
         const params = {
             TableName,

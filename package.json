@@ -4,14 +4,17 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-      "start": "node src/app.js",
-      "test": "echo \"Error: no test specified\" && exit 1"
+        "start": "node src/app.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
-      "aws-sdk": "^2.1139.0",
-      "dotenv": "^10.0.0",
-      "uuid": "^8.3.2"
+        "aws-sdk": "^2.1139.0",
+        "dotenv": "^10.0.0",
+        "uuid": "^8.3.2"
+    },
+    "devDependencies": {
+        "serverless-functions-base-path": "^1.0.32"
     }
-  }
+}

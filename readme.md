@@ -15,6 +15,10 @@ Application using serverless, DynamoDB, S3, lambda function, aws.
 
 - serverless create --template aws-nodejs --path ./
 
+## Path
+
+- npm i -D serverless-functions-base-path
+
 ## Deploy
 
 - serverless deploy
@@ -22,3 +26,7 @@ Application using serverless, DynamoDB, S3, lambda function, aws.
 ## Call function
 
 - serverless invoke -f  ***(name function)***  -l
+
+## Delete
+
+- serverless remove

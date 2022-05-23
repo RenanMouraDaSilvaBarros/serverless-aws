@@ -15,9 +15,10 @@ Application using serverless, DynamoDB, S3, lambda function, aws.
 
 - serverless create --template aws-nodejs --path ./
 
-## Path
+## Dependecies
 
 - npm i -D serverless-functions-base-path
+- npm install --save express serverless-http
 
 ## Deploy
 

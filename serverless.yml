@@ -17,34 +17,13 @@ provider:
         - dynamodb:PutItem
       Resource: "*"
 
-resources:
-  Resources:
-    CandidatesDynamoDbTable:
-      Type: 'AWS::DynamoDB::Table'
-      DeletionPolicy: Retain
-      Properties:
-        TableName: users
-        AttributeDefinitions:
-          -
-            AttributeName: "id"
-            AttributeType: "S"   
-        KeySchema:
-          -
-            AttributeName: "id"
-            KeyType: "HASH"
-        ProvisionedThroughput:
-          ReadCapacityUnits: 1
-          WriteCapacityUnits: 1
-        StreamSpecification:
-          StreamViewType: "NEW_AND_OLD_IMAGES"
-
 custom:
   functionsBasePath: src/functions
 
 functions:
-  imageCreate:
-    handler: image.create
-  	
+  hello:
+    handler: handler.create
+
   createUser:
     handler: user.create
     memorySize: 128
@@ -53,7 +32,7 @@ functions:
       - http: 
           path: user
           method: post
-  
+
   listUsers:
     handler: user.list
     memorySize: 128

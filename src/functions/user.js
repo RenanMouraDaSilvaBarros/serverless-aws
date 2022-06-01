@@ -42,7 +42,7 @@ module.exports.create = (event, context, callback) => {
 
 const createUser = user => {
   const data = {
-    TableName: process.env.USER_TABLE,
+    TableName: "users",
     Item: user,
   };
 
@@ -54,7 +54,6 @@ const userInfo = ({ nome, endereco, cidade, email }) => {
   const timestamp = new Date().getTime();
   return ({ id: uuid.v1(), nome, endereco, cidade, email, createAt: timestamp, updateAt: timestamp })
 };
-
 
 module.exports.list = (event, context, callback) => {
   var params = {

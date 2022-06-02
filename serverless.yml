@@ -17,30 +17,6 @@ provider:
         - dynamodb:PutItem
       Resource: "*"
 
-custom:
-  functionsBasePath: src/functions
-
 functions:
-  hello:
-    handler: handler.create
+  - ${file(./src/functions/getUser/functions.yml)}
 
-  createUser:
-    handler: user.create
-    memorySize: 128
-    description: create user information and starts interview process.
-    events:
-      - http: 
-          path: user
-          method: post
-
-  listUsers:
-    handler: user.list
-    memorySize: 128
-    description: List all users
-    events:
-      - http: 
-          path: users
-          method: get  
-
-plugins:
-  - serverless-functions-base-path

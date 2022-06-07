@@ -1,0 +1,12 @@
+//criar query, pegar nomes
+
+//executa query
+
+//pegar o resultado
+
+//criar arquivo com nomes uppercase e salvar
+
+
+
+//****
+query dynamo e athena

@@ -6,8 +6,7 @@ provider:
   runtime: nodejs12.x
   stage: dev
   region: us-east-1
-  environment:
-    USER_TABLE: 'users'
+
   iamRoleStatements:
     - Effect: Allow
       Action:
@@ -19,4 +18,3 @@ provider:
 
 functions:
   - ${file(./src/functions/getUser/functions.yml)}
-

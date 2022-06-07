@@ -24,7 +24,7 @@ const listAllUsers = async (event, context, callback) => {
     }
   };
 
-  dynamoDb.scan(params, onScan);
+ return dynamoDb.scan(params, onScan);
 };
 
 module.exports = { listAllUsers };

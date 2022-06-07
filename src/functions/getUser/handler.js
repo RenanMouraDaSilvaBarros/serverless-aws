@@ -4,4 +4,4 @@ const listAll = async (event, context, callback) => {
   return listAllUsers(event, context, callback);
 };
 
-module.exports = { listAll };
+module.exports = { listAll }

@@ -1,2 +1,2 @@
   listUsers:
-    handler: handler.listAll
+    handler: ./src/functions/getUser/handler.listAll

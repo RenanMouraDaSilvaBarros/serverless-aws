@@ -1,5 +1,4 @@
 const { mock } = require("../mock/user");
-const {list} = require("../../functions/user");
 describe("test", () => {
   it("list all users", async () => {
     console.log(mock);
@@ -9,7 +8,6 @@ describe("test", () => {
     //   body: mock.users,
     // });
 
-   list()
 
   });
 });

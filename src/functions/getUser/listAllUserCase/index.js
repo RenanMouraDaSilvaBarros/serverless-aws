@@ -24,7 +24,15 @@ const listAllUsers = async (event, context, callback) => {
     }
   };
 
- return dynamoDb.scan(params, onScan);
+
+  try {
+    const result = await dynamoDb.scan(params).promise()
+    return result
+  } catch (error) {
+    return error 
+  }
+
+  console.log(result)
 };
 
 module.exports = { listAllUsers };

@@ -1,7 +1,7 @@
 const { listAllUsers } = require("./listAllUserCase/index");
 
-const listAll = async (event, context, callback) => {
-  return listAllUsers(event, context, callback);
+const listAll = async (event) => {
+  return listAllUsers(event);
 };
 
 module.exports = { listAll }

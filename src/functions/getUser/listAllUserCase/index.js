@@ -19,7 +19,7 @@ const listAllUsers = async (event) => {
     };
 
   } catch (error) {
-    return { statusCode: 200, event, body: error };
+    return { statusCode: 400, event, body: error };
   }
 };
 

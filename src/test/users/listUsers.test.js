@@ -1,12 +1,24 @@
 const { mock } = require("../mock/user");
-describe("test", () => {
+
+const {
+  listAllUsers,
+} = require("../../functions/getUser/listAllUserCase/index");
+
+const { dynamdbOnScan } = require("../../components/dynamodb/on_scan");
+
+jest.mock("../../components/dynamodb/on_scan", () => ({
+  ...jest.requireActual("../../components/dynamodb/on_scan"),
+  dynamdbOnScan: jest.fn(),
+}));
+
+describe("users", () => {
   it("list all users", async () => {
 
-//  jest.spyOn(dynamdbOnScan, "dynamdbOnScan").mockReturnValue({
-//       statusCode: 200,
-//       body: mock.users,
-//     });
+    dynamdbOnScan.mockReturnValue(mock.users);
 
+    const {statusCode, body} = await listAllUsers();
 
+    expect(statusCode).toBe(200)
+    expect(body).toEqual(mock.users)
   });
 });

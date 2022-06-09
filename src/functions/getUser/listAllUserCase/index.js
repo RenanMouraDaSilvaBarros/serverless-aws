@@ -1,7 +1,6 @@
 "use strict";
 
-const AWS = require("aws-sdk");
-const {dynamdbOnScan} = require("../../../components/dynamodb/on_scan");
+const { dynamdbOnScan } = require("../../../components/dynamodb/on_scan");
 
 const listAllUsers = async (event) => {
 

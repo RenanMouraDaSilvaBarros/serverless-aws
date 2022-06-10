@@ -13,12 +13,13 @@ jest.mock("../../components/dynamodb/on_scan", () => ({
 
 describe("users", () => {
   it("list all users", async () => {
-
     dynamdbOnScan.mockReturnValue(mock.users);
 
-    const {statusCode, body} = await listAllUsers();
+    const { statusCode, body } = await listAllUsers();
 
-    expect(statusCode).toBe(200)
-    expect(body).toEqual(JSON.stringify(mock.users))
+    const {data: users} = JSON.parse(body);
+
+    expect(statusCode).toBe(200);
+    expect(users).toEqual(mock.users);
   });
 });

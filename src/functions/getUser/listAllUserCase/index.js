@@ -12,7 +12,7 @@ const listAllUsers = async (event) => {
     const users = await dynamdbOnScan(params);
     return {
       statusCode: 200,
-      body: JSON.stringify({ data: users.Items, input: event }),
+      body: JSON.stringify({ data: users, input: event }),
     };
 
    } catch (error) {

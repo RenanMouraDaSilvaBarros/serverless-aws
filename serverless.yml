@@ -20,3 +20,4 @@ provider:
 functions:
   - ${file(./src/functions/getUser/functions.yml)}
   - ${file(./src/functions/hello/functions.yml)}
+  - ${file(./src/functions/createUser/functions.yml)}

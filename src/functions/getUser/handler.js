@@ -1,3 +1,5 @@
+"use strict";
+
 const { listAllUsers } = require("./listAllUserCase/index");
 
 const listAll = async (event) => {

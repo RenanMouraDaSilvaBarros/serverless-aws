@@ -1,2 +1,6 @@
   listUsers:
-    handler: ./src/functions/getUser/handler.listAll
+    handler: src/functions/getUser/handler.listAll
+    events:
+      - http:
+          path: users
+          method: get

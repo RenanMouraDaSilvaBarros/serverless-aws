@@ -19,6 +19,6 @@ describe("users", () => {
     const {statusCode, body} = await listAllUsers();
 
     expect(statusCode).toBe(200)
-    expect(body).toEqual(mock.users)
+    expect(body).toEqual(JSON.stringify(mock.users))
   });
 });

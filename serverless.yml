@@ -1,9 +1,10 @@
+org: naner
 service: team-serverless
 frameworkVersion: '3'
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs14.x
   stage: dev
   region: us-east-1
 
@@ -18,3 +19,4 @@ provider:
 
 functions:
   - ${file(./src/functions/getUser/functions.yml)}
+  - ${file(./src/functions/hello/functions.yml)}
